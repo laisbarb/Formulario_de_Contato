@@ -7,7 +7,7 @@ A ideia principal foi transformar um layout em código, praticar CSS moderno, ap
 
 🌐 Acesse o Projeto
 
-👉 Clique aqui para ver o site ao vivo! 
+👉 Clique aqui para ver o site ao vivo : https://laisbarb.github.io/Formulario_de_Contato/ 
 
 🛠️ Tecnologias Utilizadas
 Tecnologia	Função Principal
