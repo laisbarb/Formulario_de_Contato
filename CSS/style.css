@@ -1,0 +1,296 @@
+/*  IMPORTAÇÕES E CONFIGURAÇÕES  */
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* Configurações padrão para a página inteira */
+body {
+    background-image: url('../images/fundolistrado.jpg');
+    background-repeat: repeat; /* Garante que a imagem de fundo se repita */
+    background-size: auto;     /* Evita que a imagem seja esticada */
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*  CLASSES AJUDANTES  */
+
+/* Criei esta classe para centralizar o conteúdo no desktop */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+/* Classe de acessibilidade para esconder labels, mas mantê-las para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABEÇALHO  */
+
+/* Faixa superior de informações */
+.top-bar {
+    background-color: #5a6a58;
+    color: #faefd9;
+    font-size: 0.8em;
+    padding: 8px 0;
+}
+
+.top-bar .container {
+    justify-content: space-between;
+}
+
+.top-bar-left span {
+    margin-right: 15px;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+}
+
+
+.top-bar-right .icon-link,
+.top-bar-right .language-selector,
+.top-bar-right .currency-selector {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.top-bar-right .flag-icon {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+.top-bar-right i {
+    color: #888;
+    margin-left: 5px;
+}
+
+/* Barra de Navegação Principal (Logo e Menu) */
+.main-nav-bar {
+    background-color: #faefd9;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    
+}
+
+.main-nav-bar .container {
+    height: auto;
+}
+
+.logo a {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.2em;
+    color: #5a6a58;
+    font-weight: bold;
+}
+
+.main-menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-menu a {
+    font-size: 1.1em;
+    color: #473434;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+    color: #000;
+}
+
+/* Faixa Decorativa Listrada */
+.decorative-stripe {
+    background: repeating-linear-gradient(
+        90deg,
+        #5a6a58,
+        #5a6a58 10px,
+        #f7dbe0 10px,
+        #f7dbe0 20px
+    );
+    height: 15px;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+/* FORMULÁRIO DE CONTATO  */
+
+.form-container {
+    background-color: #faefd9;
+    padding: 40px;
+    margin: 0 auto 80px auto;
+    max-width: 400px;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2.5em;
+    color: #5a6a58;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Estilo dos campos (input e textarea) */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    /* Imagem de linha torta para os campos */
+    background-image: url('../images/linha-torta.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 95% 15px;
+    
+    padding: 10px 5px 15px 5px;
+    width: calc(100% - 10px);
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+    color: #493b3b;
+}
+
+/* Estilo do placeholder (texto "name", "email", etc.) */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+    color: #534545;
+    opacity: 1; /* Padrão é 0.54 no Chrome/Firefox, 1 é mais forte */
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.1em;
+}
+
+/* Botão de Envio */
+.form-container button[type="submit"] {
+    background-color: transparent;
+    background-image: url('../images/borda-rabiscada-botao.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    
+    color: #473434;
+    border: none;
+    
+    padding: 12px 25px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    
+    min-width: 180px;
+    min-height: 50px;
+
+    transition: transform 0.3s ease; /* Transição no transform é mais performático */
+}
+
+.form-container button[type="submit"]:hover {
+    transform: translateY(-3px);
+}
+
+
+#form-status {
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/*  RESPONSIVIDADE  */
+
+@media (max-width: 768px) {
+
+    /* --- AJUSTES NO CABEÇALHO --- */
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 15px;
+    }
+
+    .top-bar .container {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .top-bar-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-nav-bar .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .decorative-stripe {
+        margin-bottom: 40px;
+    }
+
+    /* --- AJUSTES NO FORMULÁRIO --- */
+    .form-container {
+        padding: 25px;
+        margin-bottom: 40px;
+        width: 90%;
+    }
+
+    /* Ajustes de fonte para telas menores */
+    .logo a {
+        font-size: 1.9em;
+    }
+
+    .form-container h2 {
+        font-size: 2.1em;
+    }
+
+    .form-container button[type="submit"] {
+        min-width: 160px;
+        min-height: 45px;
+        font-size: 1.1em;
+    }
+}
