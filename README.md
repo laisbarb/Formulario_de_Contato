@@ -9,6 +9,11 @@ A ideia principal foi transformar um layout em código, praticar CSS moderno, ap
 
 👉 Clique aqui para ver o site ao vivo : https://laisbarb.github.io/Formulario_de_Contato/ 
 
+Design no Desktop
+
+<img width="1915" height="909" alt="Captura de tela 2025-11-10 092225" src="https://github.com/user-attachments/assets/8a885533-a643-4190-9daf-f33c60aea57f" />
+
+
 🛠️ Tecnologias Utilizadas
 Tecnologia	Função Principal
 
